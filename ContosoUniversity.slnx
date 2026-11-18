@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/contoso-api/">
+    <Project Path="contoso-api/ContosoApi.csproj" />
+  </Folder>
+  <Folder Name="/contoso-blazor-app/">
+    <Project Path="contoso-blazor-app/ContosoBlazorApp.csproj" />
+  </Folder>
+  <Folder Name="/contoso-tests/">
+    <Project Path="contoso-tests/ContosoTests.csproj" />
+  </Folder>
+</Solution>
