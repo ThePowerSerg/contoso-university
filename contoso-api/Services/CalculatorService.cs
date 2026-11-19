@@ -1,28 +1,27 @@
-using ContosoApi.Models;
-namespace ContosoApi.Services;
-
-public class CalculatorService : ICalculatorService
+namespace ContosoApi.Services
 {
-    public int Add(int x, int y) => x + y;
-    public int Subtract(int x, int y) => y - x;
-    public double Average(int[] values)
+    public class CalculatorService : ICalculatorService
     {
-        int sum = 0;
-        foreach (var value in values)
+        public int Add(int x, int y) => x + y;
+        public int Subtract(int x, int y) => y - x;
+        public double Average(int[] values)
         {
-            sum += value;
+            int sum = 0;
+            foreach (var value in values)
+            {
+                sum += value;
+            }
+
+            return sum / values.Length;
         }
 
-        return sum / values.Length;
-    }
-
-    // create a DTO for this part
-    public bool HasMinimumAge(Student student)
-    {
-        if (student.Age >= 18)
+        public bool HasMinimumAge(int age)
         {
-            return true;
+            if (age >= 18)
+            {
+                return true;
+            }
+            else return false;
         }
-        else return false;
     }
 }
