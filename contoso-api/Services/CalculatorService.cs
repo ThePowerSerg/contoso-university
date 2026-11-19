@@ -15,13 +15,6 @@ namespace ContosoApi.Services
             return sum / values.Length;
         }
 
-        public bool HasMinimumAge(int age)
-        {
-            if (age >= 18)
-            {
-                return true;
-            }
-            else return false;
-        }
+        public bool HasMinimumAge(int age) => age >= 18;
     }
 }
